@@ -1,31 +1,42 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div class="image-container">
+    <el-card class="box-card">
+      <div slot="header" class="clearfix">
+        <!-- 面包屑路径导航 -->
+        <el-breadcrumb separator-class="el-icon-arrow-right">
+          <el-breadcrumb-item to="/">首页</el-breadcrumb-item>
+          <el-breadcrumb-item>素材管理</el-breadcrumb-item>
+        </el-breadcrumb>
+        <el-button
+        type="warning"
+        icon='el-icon-star-on'>
+        </el-button>
+      </div>
+    
+      <!-- <image-list /> -->
+      <!-- /图片列表 -->
+    </el-card>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script>
+// import ImageList from './components/image-list'
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+export default {
+  name: 'APP',
+  components: {
+    // ImageList
+  },
+  props: {},
+  data () {
+    return {}
+  },
+  computed: {},
+  watch: {},
+  created () {},
+  mounted () {},
+  methods: {}
 }
+</script>
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<style scoped lang="less"></style>
